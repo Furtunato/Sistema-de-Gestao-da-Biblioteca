@@ -54,7 +54,7 @@ class BibliotecaDAO {
         return $result;
     }
 
-    // 🔍 BUSCAR (NOVO MÉTODO)
+    // BUSCAR
     public function buscarBiblioteca($texto) {
         $stmt = $this->conn->prepare("
             SELECT * FROM biblioteca 
@@ -106,7 +106,7 @@ class BibliotecaDAO {
         $stmt->execute([':titulo' => $titulo]);
     }
 
-    // BUSCAR POR TÍTULO (opcional)
+    // BUSCAR
     public function buscarPorTitulo($titulo) {
         $stmt = $this->conn->prepare("SELECT * FROM biblioteca WHERE titulo = :titulo LIMIT 1");
         $stmt->execute([':titulo' => $titulo]);

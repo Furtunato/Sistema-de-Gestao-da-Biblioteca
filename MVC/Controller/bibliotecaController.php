@@ -15,7 +15,7 @@ class BibliotecaController {
         return $this->dao->lerBiblioteca();
     }
 
-    // BUSCAR – NOVO MÉTODO
+    // BUSCAR
     public function buscar($texto) {
         return $this->dao->buscarBiblioteca($texto);
     }
